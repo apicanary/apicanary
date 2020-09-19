@@ -1,0 +1,28 @@
+{
+  "name": "@apicanary/apicanary",
+  "version": "1.0.2",
+  "description": "Command line tool to publish to API Canary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apicanary/apicanary.git"
+  },
+  "keywords": [
+    "API",
+    "testing"
+  ],
+  "author": "API Canary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apicanary/apicanary/issues"
+  },
+  "homepage": "https://github.com/apicanary/apicanary#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "minimist": "^1.2.5",
+    "ora": "^5.1.0"
+  }
+}
