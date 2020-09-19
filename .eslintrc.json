@@ -1,0 +1,82 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "$": false,
+        "_": false,
+        "process": false,
+        "require": false,
+        "module": false,
+        "describe": false,
+        "it": false,
+        "expect": false,
+        "__dirname": false,
+        "__basedir": false,
+        "global": false,
+        "beforeEach": false,
+        "beforeAll": false,
+        "exports": false
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "no-invalid-this": "off",
+        "lines-around-comment": "off",
+        "comma-dangle": "off",
+        "max-lines": "off",
+        "newline-per-chained-call": "off",
+        "max-lines-per-function": "off",
+        "array-element-newline": "off",
+        "no-magic-numbers": "off",
+        "no-continue": "off",
+        "object-shorthand": "off",
+        "object-property-newline": "off",
+        "dot-notation": "off",
+        "object-curly-spacing": ["error", "always"],
+        "prefer-destructuring": "off",
+        "arrow-body-style": "off",
+        "no-process-env": "off",
+        "sort-imports": "off",
+        "capitalized-comments": "off",
+        "multiline-comment-style": "off",
+        "max-len": "off",
+        "object-curly-newline": "off",
+        "quote-props": "off",
+        "sort-keys": "off",
+        "id-length": "off",
+        "no-plusplus": "off",
+        "function-paren-newline": "off",
+        "quotes": "off",
+        "camelcase": "off",
+        "one-var": "off",
+        "dot-location": "off",
+        "class-methods-use-this": "off",
+        "line-comment-position": "off",
+        "no-inline-comments": "off",
+        "no-extra-parens": "off",
+        "max-params": "off",
+        "max-statements": "off",
+        "indent": [
+            "error",
+            2,
+            {
+                "SwitchCase": 1,
+                "ignoreComments": true
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ]
+    }
+}
