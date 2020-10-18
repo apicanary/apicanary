@@ -64,7 +64,7 @@
         "max-statements": "off",
         "indent": [
             "error",
-            2,
+            4,
             {
                 "SwitchCase": 1,
                 "ignoreComments": true

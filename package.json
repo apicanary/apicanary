@@ -23,8 +23,13 @@
   "dependencies": {
     "axios": "^0.20.0",
     "chalk": "^4.1.0",
+    "lodash": "^4.17.20",
     "minimist": "^1.2.5",
-    "ora": "^5.1.0"
+    "ora": "^5.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "tosource": "^2.0.0-alpha.2",
+    "vm2": "^3.9.2"
   },
   "devDependencies": {
     "eslint": "^7.9.0"
