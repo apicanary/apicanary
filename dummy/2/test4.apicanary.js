@@ -1,12 +1,13 @@
 /**
- * @canary_test_id dummy3
- * @canary_test_name Dummy Test 3
+ * @canary_test_id dummy4
+ * @canary_test_name Dummy Test 4
  */
 
 exports.handler = function (event, context, callback) {
     console.log("event", event)
     console.log("context", context)
     console.log("callback", callback)
-    callback(null, "DEBUG SUCCESS")
+    throw "DEBUG THROW"
+    callback("DEBUG Failure")
     // return callback("DEBUG FAILURE")
 }

@@ -1,6 +1,6 @@
 {
   "name": "apicanary",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A command line tool to publish to API Canary",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "chalk": "^4.1.0",
+    "colors": "^1.4.0",
     "lodash": "^4.17.20",
     "minimist": "^1.2.5",
     "ora": "^5.1.0",
