@@ -39,6 +39,10 @@ const menus = {
 
     Execute a Canary Test locally on your machine
 
+    Options
+
+    --env_file <file path> .......... Load a custom dot env file when executing tests
+
     `,
 }
 

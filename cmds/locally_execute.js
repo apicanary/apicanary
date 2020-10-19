@@ -5,17 +5,26 @@ const colors = require('colors')
 const error = require('../utils/error')
 const code_execute = require('../utils/code_execute')
 const scanForFiles = require('../utils/scan_for_files')
+const logger = require('../utils/logger')
+
+console.log("logger.getLogLevel", logger.getLogLevel())
 
 const outputExecuteResponse = function(file_path, execute_response){
     const success_string = ((execute_response.success_flag) ? 'PASSED'.green : 'FAILED'.red)
-    console.log(file_path, success_string)
+    logger.log(1, file_path, success_string)
+    let execution_log_level = 0
+    // if (!execute_response.success_flag) {
+    //     execution_log_level = 1
+    // }
+
+    execute_response.log_lines.map((log_line) => {
+        logger.log(execution_log_level, "    " + log_line.type.green + ":", log_line.data)
+    })
+
     if (!execute_response.success_flag) {
-        execute_response.log_lines.map((log_line) => {
-            console.log("    " + log_line.type + ":", log_line.data)
-        })
-        console.log("    ERROR:", execute_response.error_message.red)
-        // console.log(execute_response.log_lines)
+        logger.log(1, "    ERROR:".red, execute_response.error_message)
     }
+    // console.log(execute_response.log_lines)
 }
 
 const executeLocalTest = async function(file_path){
@@ -54,6 +63,11 @@ const executeLocalTest = async function(file_path){
 
 module.exports = async (args) => {
 
+    // Load config file if provided
+    if (args.env_file) {
+        require('dotenv').config({ path: args.env_file })
+    }
+
     const file_path = args._[1]
 
     // console.log(`Checking for ${file_path}...`)
@@ -62,7 +76,7 @@ module.exports = async (args) => {
     let found_files
     if (file_path) {
         if (!fs.existsSync(file_path)) {
-            error("file was not found", true)
+            throw "file was not found " + file_path
         }
         found_files = [file_path]
     } else {

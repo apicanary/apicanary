@@ -1,8 +1,15 @@
 const minimist = require('minimist')
 const error = require('./utils/error')
+const logger = require('./utils/logger')
 
 module.exports = () => {
     const args = minimist(process.argv.slice(2))
+
+    if(args.verbose){
+        logger.setLogLevel(0)
+    }
+    // console.log(logger.getLogLevel())
+
 
     let cmd = args._[0] || 'help'
 

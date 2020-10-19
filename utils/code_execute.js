@@ -54,9 +54,9 @@ exports.handler = async function (_event, _context) {
         if (typeof data.stack !== "undefined") {
             return _.toString(data)
         } else if (typeof data !== "string") {
-            return toSource(data).substring(0, 200)
+            return toSource(data).substring(0, 10000)
         }
-        return data.substring(0, 200)
+        return data.substring(0, 10000)
     }
 
     const updateLogLines = function (type, log_line_data) {
