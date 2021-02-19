@@ -109,6 +109,6 @@ Project Link: [https://github.com/apicanary/apicanary](https://github.com/apican
 [forks-shield]: https://img.shields.io/github/forks/apicanary/apicanary?style=for-the-badge
 [forks-url]: https://github.com/apicanary/apicanary/network/members
 [stars-shield]: https://img.shields.io/github/stars/apicanary/apicanary?style=for-the-badge
-[stars-url]: https://github.com/roshanlam/apicanary/apicanary
+[stars-url]: https://github.com/apicanary/apicanary
 [issues-shield]: https://img.shields.io/github/issues/apicanary/apicanary?style=for-the-badge
 [issues-url]: https://github.com/apicanary/apicanary/issues
