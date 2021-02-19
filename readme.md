@@ -14,7 +14,7 @@
   <h3 align="center">API Canary - Command Line Tool</h3>
 
   <p align="center">
-    A command line app to publish to [API Canary](https://www.apicanary.com)
+    A command line app to publish to <a href="https://www.apicanary.com" target="_BLANK">API Canary</a>
     <br />
     <br />
     <a href="https://github.com/apicanary/apicanary/">View Demo</a>
